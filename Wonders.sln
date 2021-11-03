@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31729.503
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Homework_3", "Homework_3\Homework_3.csproj", "{2B3E7DEC-4BC2-4823-BFAA-F7B76223791D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wonders", "Homework_3\Wonders.csproj", "{2B3E7DEC-4BC2-4823-BFAA-F7B76223791D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Washer", "Washer\Washer.csproj", "{6E45E093-E8CC-44F4-89F1-404ECDC38C7D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{2B3E7DEC-4BC2-4823-BFAA-F7B76223791D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2B3E7DEC-4BC2-4823-BFAA-F7B76223791D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2B3E7DEC-4BC2-4823-BFAA-F7B76223791D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E45E093-E8CC-44F4-89F1-404ECDC38C7D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E45E093-E8CC-44F4-89F1-404ECDC38C7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E45E093-E8CC-44F4-89F1-404ECDC38C7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E45E093-E8CC-44F4-89F1-404ECDC38C7D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
