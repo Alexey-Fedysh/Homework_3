@@ -17,14 +17,15 @@ namespace Input
 
             //Авторежим
             string messege = (storage[0].StartWash(Mode.QuickWash)) ? "Successfully" : "Error";
+            Console.WriteLine(messege);
 
             //Ручной режим 
             PropertiesProcess prop = new PropertiesProcess();
             prop.speed = 444;
             prop.time = 14.55;
-            storage[0].SetPropertiesManually(ref prop);
+            storage[1].SetPropertiesManually(ref prop);
             string new_messege = (storage[0].Work())? "Successfully" : "Error";
-
+            Console.WriteLine(new_messege);
         }
     }
 }
