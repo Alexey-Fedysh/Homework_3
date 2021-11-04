@@ -6,7 +6,7 @@ namespace Appliances
     {
         public void ShowInfoWasher()
         {
-            Console.Write("Manufacturer: " + Manufacturer
+            Console.Write("\nManufacturer: " + Manufacturer
                 + "\tModel: " + Model
                 + "\nMaxload: " + MaxLoad.ToString()
                 + "\tPrice: " + Price.ToString()

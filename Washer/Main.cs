@@ -20,6 +20,7 @@ namespace Input
             Console.WriteLine(messege);
 
             //Ручной режим 
+            storage[1].ShowInfoWasher();
             PropertiesProcess prop = new PropertiesProcess();
             prop.speed = 444;
             prop.time = 14.55;

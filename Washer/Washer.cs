@@ -72,7 +72,7 @@ namespace Appliances
     
         public bool Work()
         {
-            Console.WriteLine("Enter mode: " + mode.GetType().Name);
+            Console.WriteLine("\n\nEnter mode: " + mode);
             for(double time = 0; time < properties.time; ++time) 
             {
                 Console.WriteLine("Washer worked {0}\\{1} min. \t Speed: {2}", time, properties.time, properties.speed);
