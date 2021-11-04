@@ -9,8 +9,8 @@ namespace Appliances
             Console.Write("Manufacturer: " + Manufacturer
                 + "\tModel: " + Model
                 + "\nMaxload: " + MaxLoad.ToString()
-                + "Price: " + Price.ToString()
-                + "Load type: " + LType.GetType().Name);
+                + "\tPrice: " + Price.ToString()
+                + "\tLoad type: " + LType.GetType().Name);
         }
     }
 }
