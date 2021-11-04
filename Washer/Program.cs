@@ -1,12 +1,30 @@
 ﻿using System;
+using Appliances;
 
-namespace Appliances
+namespace Input
 {
     class MainInput
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Washer washer = new Washer(6, 16444.00, LoadType.Frontal);
+            Washer[] storage = new Washer[5];
+            for(int i =0; i < storage.Length; ++i)
+            {
+                storage[i] = washer;
+            }
+            storage[0].ShowInfoWasher();
+
+            //Авторежим
+            string messege = (storage[0].StartWash(Mode.QuickWash)) ? "Successfully" : "Error";
+
+            //Ручной режим 
+            PropertiesProcess prop = new PropertiesProcess();
+            prop.speed = 444;
+            prop.time = 14.55;
+            storage[0].SetPropertiesManually(ref prop);
+            string new_messege = (storage[0].Work())? "Successfully" : "Error";
+
         }
     }
 }

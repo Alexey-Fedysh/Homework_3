@@ -2,6 +2,11 @@
 
 namespace Appliances
 {
+    struct PropertiesProcess
+    {
+        public int speed;
+        public double time;
+    }
     enum Mode
     {
         Cotton_Linen,
@@ -15,28 +20,26 @@ namespace Appliances
         Frontal,
         Vertical
     }
-    class Washer
+    //#1.1------
+    partial class Washer
     {
+        
         //Info
-        public string Manufacturer { get; private set; }
-        public string Model { get; private set; }
+        //#1.5------- Не лучшая идея, пусть будет так.
+        static public string Manufacturer { get; private set; }
+        static public string Model { get; private set; }
+        //#1.2--------
         public uint MaxLoad { get; private set; }
         public double Price { get; set; }
         private LoadType LType { get; set; }
         //Process
         private bool On { get; set; }
         private Mode mode{ get; set; }
-        struct PropertiesProcess
-        {
-            public int speed;
-            public double time;
-        }
         private PropertiesProcess properties;
 
+        //#1.6-------
         public Washer()
         {
-            Manufacturer = "Неизвестно";
-            Model = "Неизвестно";
             MaxLoad = 0;
             Price = 0;
             On = false;
@@ -52,28 +55,34 @@ namespace Appliances
             LType = lt;
             mode = md;
         }
-            
-        public void ShowInfoWasher()
+        public Washer(uint ml, double p, LoadType lt) : this()
         {
-            Console.Write("Manufacturer: " + Manufacturer
-                + "\tModel: " + Model
-                + "\nMaxload: " + MaxLoad.ToString()
-                + "Price: " + Price.ToString()
-                + "Load type: " + LType.GetType().Name);
+            MaxLoad = ml;
+            Price = p;
+            LType = lt;
+
         }
+        //#1.7--------
+        static Washer()
+        {
+            Manufacturer = "Hotpoint-Ariston";
+            Model = "VMSG 622 ST";
+        }              
+        //#1.3------
+    
         public bool Work()
         {
             Console.WriteLine("Enter mode: " + mode.GetType().Name);
-            for(int time = 0; time < properties.time; ++time) 
+            for(double time = 0; time < properties.time; ++time) 
             {
                 Console.WriteLine("Washer worked {0}\\{1} min. \t Speed: {2}", time, properties.time, properties.speed);
             }
             return true;
+            //Можно еще диагностики напилить в процессе работы.
         }
         public bool StartWash(Mode md)
         {
             mode = md;
-
             if (!On)
             {
                 On = true;
@@ -107,6 +116,11 @@ namespace Appliances
                 }
             }
             return false;
+        }
+        //#1.4------
+        public void  SetPropertiesManually(ref PropertiesProcess prop)
+        {
+            properties = prop;
         }
     }
 }
